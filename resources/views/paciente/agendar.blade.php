@@ -28,7 +28,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -42,7 +42,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                             @foreach($horarios[$i] as $hr)
-                                                <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                             @endforeach
                                             </td>
                                         @else
@@ -56,7 +56,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -70,7 +70,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -84,7 +84,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -98,7 +98,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -112,7 +112,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -126,7 +126,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -140,7 +140,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -154,7 +154,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -168,7 +168,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -182,7 +182,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else
@@ -196,7 +196,7 @@
                                         @if(isset($horarios[$i]))
                                             <td>
                                                 @foreach($horarios[$i] as $hr)
-                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['nome']}}<br>
+                                                    <input type="radio" name="consulta" value="{{$hr['id']}}">{{$hr['medico']['usuario']['nome']}} - {{$hr['medico']['especialidade']}}<br>
                                                 @endforeach
                                             </td>
                                         @else

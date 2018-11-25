@@ -23,7 +23,9 @@ class PacienteController extends Controller
     }
 
     public function agendarEspecialista(){
-        $horarioMedico = HorarioMedico::with('medico')->where('status', 'L')->get();
+        $horarioMedico = HorarioMedico::whereHas('medico', $filter = function ($query) {
+            $query->where('especialidade', '!=', 'Clinico Geral');
+        })->with(['medico' => $filter])->where('status', 'L')->get();
 
 
         $collection = $horarioMedico->groupBy('horario_id');

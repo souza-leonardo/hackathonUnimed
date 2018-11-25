@@ -18,6 +18,6 @@ class HorarioMedico extends Model
     public $timestamps = true;
 
     public function medico(){
-        return $this->belongsTo('App\User', 'medico_id', 'id');
+        return $this->belongsTo('App\Models\Medico', 'medico_id', 'id');
     }
 }

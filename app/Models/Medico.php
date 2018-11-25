@@ -10,4 +10,8 @@ class Medico extends Model
         'usuario_id',
         'especialidade',
     ];
+
+    public function usuario(){
+        return $this->belongsTo('App\User', 'usuario_id', 'id');
+    }
 }
