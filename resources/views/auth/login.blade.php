@@ -59,7 +59,7 @@
                     <div class="login-content card" style="margin-top: 1em; margin-bottom: -1px;">
                         <div class="login-form" style="margin-top: -50px;">
                             <div class="text-center">
-                                <img src="{{asset('images/logo.jpg')}}" alt="" class="mx-auto d-block" width="60%">
+                                <img src="{{asset('images/logoUnimed.png')}}" alt="" class="mx-auto d-block" width="60%">
                             </div>
                             <form method="POST" action="{{route('login')}}">
                                 {{ csrf_field() }}

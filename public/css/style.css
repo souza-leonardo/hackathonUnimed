@@ -1579,17 +1579,17 @@ textarea {
   white-space: nowrap;
 }
 .sidebar-nav ul li a:hover {
-  color: #ecb52f;
+  color: #056f18;
 }
 .sidebar-nav ul li a:hover i {
-  color: #ecb52f;
+  color: #056f18;
 }
 .sidebar-nav ul li a.active {
-  color: #ecb52f;
+  color: #056f18;
   font-weight: 500;
 }
 .sidebar-nav ul li a.active i {
-  color: #ecb52f;
+  color: #056f18;
 }
 .sidebar-nav ul li ul {
   padding-left: 28px;
@@ -1634,15 +1634,15 @@ textarea {
 .sidebar-nav > ul > li > a.active {
   font-weight: 400;
   background: #fff;
-  color: #ecb52f;
+  color: #056f18;
 }
 .sidebar-nav > ul > li.active > a {
-  color: #ecb52f;
+  color: #056f18;
   font-weight: 500;
   border-left: 3px solid #fff;
 }
 .sidebar-nav > ul > li.active > a i {
-  color: #ecb52f;
+  color: #056f18;
 }
 .sidebar-nav .has-arrow {
   position: relative;
@@ -1893,7 +1893,7 @@ textarea {
 }
 .label-light-warning {
   background-color: #fff8ec;
-  color: #ffb22b;
+  color: #056f18;
 }
 .label-light-danger {
   background-color: #f9e7eb;

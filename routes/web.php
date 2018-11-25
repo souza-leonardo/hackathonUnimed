@@ -42,6 +42,10 @@ Route::group(['middleware' => 'auth'], function () {
         Route::get('/agendar', 'PacienteController@agendar')->name('pacientes.agendar');
         Route::post('/storeConsulta', 'PacienteController@storeConsulta')->name('pacientes.storeConsulta');
     });
+
+    Route::group(['prefix' => '/procedimentos'], function(){
+       Route::get('/abertos', 'ProcedimentoController@abertos')->name('procedimentos.abertos');
+    });
 });
 
 Auth::routes();

@@ -13,4 +13,8 @@ class Procedimento extends Model
         'consulta_id',
         'status',
     ];
+
+    public function consulta(){
+        return $this->belongsTo('App\Models\Consulta', 'consulta_id', 'id');
+    }
 }

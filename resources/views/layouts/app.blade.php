@@ -112,6 +112,10 @@
                                 <li> <a href="{{ route('pacientes.agendar') }}" aria-expanded="false"><i class="fa fa-hospital-o"></i><span class="hide-menu">Agendar Consulta</span></a>
                                 </li>
                             @endif
+
+                            @if(\Auth::user()->tipo_usuario == 3)
+                                <li><a href="{{ route('procedimentos.abertos') }}" aria-expanded="false"><i class="fa fa-th-list"></i><span class="hide-menu">Procedimentos em Aberto</span></a></li>
+                            @endif
                         </ul>
                     </nav>
                     <!-- End Sidebar navigation -->
