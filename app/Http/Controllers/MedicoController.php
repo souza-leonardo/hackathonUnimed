@@ -40,7 +40,9 @@ class MedicoController extends Controller
     }
 
     public function listarConsulta(){
-        $medico = Medico::find(\Auth::user()->id);
+//        dd(\Auth::user()->id);
+        $medico = Medico::where('usuario_id', \Auth::user()->id)->first();
+//dd($medico->id);
         $consultas = Consulta::with('paciente')->where('medico_id', $medico->id)->where('status', "A")->get();
 
         return view('medico.consulta.listar')->with(compact('consultas'));

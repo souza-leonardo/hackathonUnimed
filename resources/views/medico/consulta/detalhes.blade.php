@@ -8,7 +8,7 @@
                 <br>
                 <div>
                     <input type="submit" value="Finalizar Consulta" class="btn btn-success col-4 pull-left" data-toggle="modal" data-target="#modalFinalizar">
-                    <input type="button" value="Realizar Encaminhamento" class="btn btn-primary col-4 pull-right" data-toggle="modal" data-target="#modalEncaminhar">
+                    <input type="button" value="Jornada do Paciente" class="btn btn-primary col-4 pull-right" data-toggle="modal" data-target="#modalEncaminhar">
                 </div>
             </div>
         </div>
@@ -50,7 +50,7 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title" id="exampleModalLongTitle"><b>Finalizar Atendimento</b>
+                    <h4 class="modal-title" id="exampleModalLongTitle"><b>Atendimento</b>
                         <br>
                         <small>Paciente: <b>{{$consulta->paciente->nome}}</b></small>
                     </h4>
