@@ -47,6 +47,12 @@ Route::group(['middleware' => 'auth'], function () {
     Route::group(['prefix' => '/procedimentos'], function(){
        Route::get('/abertos', 'ProcedimentoController@abertos')->name('procedimentos.abertos');
     });
+
+    Route::group(['prefix' => '/central'], function(){
+       Route::get('/agendar', 'CentralController@agendar')->name('central.agendar');
+
+       Route::post('/store', 'CentralController@store')->name('central.store');
+    });
 });
 
 Auth::routes();
