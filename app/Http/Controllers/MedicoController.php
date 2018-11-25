@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Consulta;
 use App\Models\Medico;
+use App\Models\Procedimento;
 use Illuminate\Http\Request;
 
 class MedicoController extends Controller
@@ -46,5 +47,34 @@ class MedicoController extends Controller
         $consulta = Consulta::find($id);
 
         return view('medico.consulta.detalhes')->with(compact('consulta'));
+    }
+
+    public function finalizarConsulta(Request $request){
+//        dd($request);
+        $consulta = Consulta::find($request->consulta);
+
+        $consulta->observacao = $request->observacoes;
+        $consulta->status = "F";
+        $consulta->update();
+
+        \Session::flash('success', 'Serviço finalizado');
+        return redirect()->route('medicos.listarConsulta');
+    }
+
+    public function encaminhar(Request $request){
+        $consulta = Consulta::find($request->consulta);
+        $consulta->observacao = $request->observacoes;
+        $consulta->status = "E";
+        $consulta->update();
+
+        foreach ($request->opcoes as $aux){
+            $procedimento = new Procedimento();
+            $procedimento->descricao = $aux;
+            $procedimento->consulta_id = $request->consulta;
+            $procedimento->save();
+        }
+
+        \Session::flash('success', 'Atendimento Encaminhado');
+        return redirect()->route('medicos.listarConsulta');
     }
 }

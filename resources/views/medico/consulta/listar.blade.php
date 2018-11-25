@@ -11,6 +11,7 @@
                         <tr>
                             <th>Data</th>
                             <th>Paciente</th>
+                            <th>Status</th>
                             <th></th>
                         </tr>
                         </thead>
@@ -19,6 +20,13 @@
                                 <tr>
                                     <td>{{\Carbon\Carbon::parse($con['data_consulta'])->format('d/m/Y H:i')}}</td>
                                     <td>{{$con['paciente']['nome']}}</td>
+                                    <td>
+                                        @if($con['status'] == "A")
+                                            Aberta
+                                        @elseif($con['status'] == "E")
+                                            Encaminhada
+                                        @endif
+                                    </td>
                                     <td><a href="{{route('medicos.detalheConsulta', ['id' => $con['id']])}}" style="color: blue;"><i class="fa fa-edit"></i> Abrir Consulta</a></td>
                                 </tr>
                             @endforeach

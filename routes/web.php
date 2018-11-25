@@ -34,6 +34,8 @@ Route::group(['middleware' => 'auth'], function () {
 
         Route::post('/storeAgenda', "MedicoController@storeAgenda")->name('medicos.storeAgenda');
         Route::post('/store', "MedicoController@store")->name('medicos.store');
+        Route::post('/finalizarConsulta', 'MedicoController@finalizarConsulta')->name('medicos.finalizarConsulta');
+        Route::post('/encaminhar', 'MedicoController@encaminhar')->name('medicos.encaminhar');
     });
 
     Route::group(['prefix' => '/pacientes'], function(){
