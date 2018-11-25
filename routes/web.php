@@ -40,6 +40,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::group(['prefix' => '/pacientes'], function(){
         Route::get('/agendar', 'PacienteController@agendar')->name('pacientes.agendar');
+        Route::get('/agendarEspecialista', 'PacienteController@agendarEspecialista')->name('pacientes.agendarEspecialista');
         Route::post('/storeConsulta', 'PacienteController@storeConsulta')->name('pacientes.storeConsulta');
     });
 

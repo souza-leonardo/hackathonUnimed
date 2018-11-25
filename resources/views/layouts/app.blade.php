@@ -111,6 +111,10 @@
                             @if(\Auth::user()->tipo_usuario == 2)
                                 <li> <a href="{{ route('pacientes.agendar') }}" aria-expanded="false"><i class="fa fa-hospital-o"></i><span class="hide-menu">Agendar Consulta</span></a>
                                 </li>
+                                @php $consulta = \App\Models\Consulta::where('status', "E")->where('paciente_id', \Auth::user()->id)->first(); @endphp
+                                @if($consulta)
+                                    <li> <a href="{{ route('pacientes.agendarEspecialista') }}" aria-expanded="false"><i class="fa fa-hospital-o"></i><span class="hide-menu">Agendar Consulta Especialista</span></a>
+                                @endif
                             @endif
 
                             @if(\Auth::user()->tipo_usuario == 3)

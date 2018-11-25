@@ -17,6 +17,7 @@ class CreateConsultasTable extends Migration
             $table->increments('id');
             $table->integer('paciente_id');
             $table->integer('medico_id');
+            $table->integer('horario_medico_id');
             $table->string('status', 1)->default("A");
             $table->dateTime('data_consulta');
             $table->text('observacao')->nullable();

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Consulta;
+use App\Models\HorarioMedico;
 use App\Models\Medico;
 use App\Models\Procedimento;
 use Illuminate\Http\Request;
@@ -28,8 +29,9 @@ class MedicoController extends Controller
 
     public function storeAgenda(Request $request){
         if(isset($request->horario)){
+            $medico = Medico::where('usuario_id', \Auth::user()->id)->first();
                 foreach ($request->horario as $horario)
-                    \DB::table('horario_medico')->insert(['medico_id' => \Auth::user()->id, 'horario_id' => $horario, 'semana_id' => 0]);
+                    \DB::table('horario_medico')->insert(['medico_id' => $medico->id, 'horario_id' => $horario, 'semana_id' => 0]);
 
             \Session::flash('success', 'Agenda cadastrada com sucesso');
             return redirect()->route('home');
@@ -38,7 +40,8 @@ class MedicoController extends Controller
     }
 
     public function listarConsulta(){
-        $consultas = Consulta::with('paciente')->where('medico_id', \Auth::user()->id)->where('status', "A")->get();
+        $medico = Medico::find(\Auth::user()->id);
+        $consultas = Consulta::with('paciente')->where('medico_id', $medico->id)->where('status', "A")->get();
 
         return view('medico.consulta.listar')->with(compact('consultas'));
     }
@@ -56,6 +59,10 @@ class MedicoController extends Controller
         $consulta->observacao = $request->observacoes;
         $consulta->status = "F";
         $consulta->update();
+
+        $horario = HorarioMedico::find($consulta->horario_medico_id);
+        $horario->status = "L";
+        $horario->update();
 
         \Session::flash('success', 'Serviço finalizado');
         return redirect()->route('medicos.listarConsulta');
